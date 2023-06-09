@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 30px;
+    border: 1px solid;
+    background-color: #FFF4F4;
+    color: #000000;
+    padding: 3em 3em 0 3em;
+    text-rendering: optimizeLegibility;
+}
+
+#main a {
+    text-decoration: none;
+    color: #606C5D;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+#main {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1260px;
+    background-color: #F7E6C4;
+    box-shadow: 0 8px 1.5em #19191950;
+}
+
+#title {
+    line-height: 1.8rem;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #606C5D;
+    color: #FFF4F4;
+    width: 100%;
+    text-shadow: 1px 2px 3px #232020;
+}
+
+#title::after {
+    content: "The world's first computer programmer";
+    display: block;
+    color: #FFF4F4;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1rem;
+    padding-top: 0.5em;
+}
+
+section {
+    margin: 0 auto;
+}
+
+#img-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    background-color: #F1C376;
+}
+
+#img-div {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#img-caption {
+    color: #F1C376;
+    padding: 0 1em;
+    font-size: 0.8rem;
+    background-color: #00000075;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#img-caption a {
+    color: #F1C376;
+}
+
+#tribute-info {
+    width: 100%;
+    text-align: justify;
+    margin: 0 2em 2em 2em;
+}
+
+
+/* ? SUCCESS TIMELINE */
+
+.timeline-section {
+    text-align: left;
+    margin: 4em auto;
+}
+
+#timeline-title {
+    text-align: center;
+    padding: 0.5em 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    border-bottom: 1px solid #606C5D;
+}
+
+/* ! CONTAINER */
+.timeline-info-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ! BOX */
+.timeline-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.timeline-info:nth-child(2n+1) {
+    text-align: right;
+    border-right: 1px solid #606C5D;
+}
+
+
+.timeline-info:nth-child(2n+2) {
+    margin-top: 12em;
+    align-self: end;
+}
+
+.timeline-info:nth-child(1) {
+    padding-top: 4em;
+}
+
+.date {
+    font-size: 1.5em;
+    padding: 0.5em 1.4em;
+    width: fit-content;
+}
+
+.timeline-info:nth-child(2n+1) .date {
+    align-self: flex-end;
+}
+
+.info {
+    padding: 1.5em 2em;
+    border-bottom: 1px solid #606C5D;
+
+}
+
+.resize {
+    font-size: 1.2rem;
+}
+
+#quote {
+
+    padding: 2em 1em;
+}
+
+#quote q {
+    font-style: italic;
+}
+
+#quote p {
+    margin: 2em;
+    font-weight: bold;
+}
+
+#learn-more-link {
+    padding: 2em;
+
+}
+
+
+
+#tribute-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+#tribute-link:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    margin: auto;
+    color: #999;
+    max-width: 1260px;
+    padding: 1em;
+    font-size: 0.8em;
+}
+
+footer a {
+    text-decoration: none;
+    color: #999;
+}
+
+footer a:hover {
+    color: #606C5D;
+    text-decoration: none !important;
+}
+
+/* ? styles when screen width is 1200px or larger */
+@media (min-width: 1200px) {
+    body {
+        padding: 3em 8em 0;
+    }
+
+    #title {
+        padding: 1.2em;
+    }
+
+    #img-section {
+        flex-wrap: nowrap;
+    }
+
+
+    #tribute-info {
+        width: 35%;
+        margin: 1em 2em 1em 0;
+    }
+
+    .timeline-section {
+        max-width: 780px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        padding: 1.5em 1.5em 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        box-shadow: none !important;
+    }
+
+    .timeline-info-div {
+        display: block;
+    }
+
+    .timeline-info {
+        margin: 0 !important;
+        border: none !important;
+        padding-top: 4em;
+    }
+
+    .date {
+        border-bottom: 1px solid;
+    }
+
+    .info {
+        border: none;
+    }
+}
